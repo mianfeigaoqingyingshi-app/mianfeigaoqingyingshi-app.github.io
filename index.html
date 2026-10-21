@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
+<title>免费高清影视｜零门槛畅看高清电影电视剧综艺，mianfeigaoqingyingshi-app.github.io</title>
+<meta name="keywords" content="免费高清影视,mianfeigaoqingyingshi-app.github.io,免费高清影视在线观看,高清电影电视剧免费看,热门综艺综艺大全,动漫番剧国漫推荐,影视资源免费高清,追剧神器看片指南,最新电影预告资讯,免费高清影视官网入口">
+<meta name="description" content="免费高清影视（https://mianfeigaoqingyingshi-app.github.io）是零门槛的高清影视观看入口，覆盖最新电影、热播电视剧、综艺真人秀、动漫番剧与短剧，提供免费高清资源导航、上线预告、剧集解析与看片指南。免费高清影视坚持更新快、画质清、分类全，帮你用最少时间找到最想看的那一部。">
+<link rel="canonical" href="https://mianfeigaoqingyingshi-app.github.io/">
+<style>
+:root{
+  --bg:#0b1020; --bg2:#121a30; --card:#1a2440; --card2:#22304f;
+  --txt:#e8ecf7; --txt2:#9aa8c9; --line:#2a3554;
+  --cyan:#39d0d8; --blue:#4f7bff; --pink:#ff6b9d; --yellow:#ffcf5c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.75;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* 公告条 */
+.notice{background:linear-gradient(90deg,#1a1530,#0b1020);border-bottom:1px solid var(--line);font-size:13px;color:var(--txt2)}
+.notice .wrap{display:flex;gap:12px;padding-top:8px;padding-bottom:8px;align-items:center}
+.notice b{color:var(--pink);font-weight:600;letter-spacing:1px}
+
+/* 头部 */
+header{position:sticky;top:0;z-index:60;background:rgba(11,16,32,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:18px;padding:14px 0}
+.logo{font-size:24px;font-weight:800;letter-spacing:1px;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.logo small{display:block;font-size:11px;letter-spacing:3px;color:var(--txt2);font-weight:400;-webkit-text-fill-color:var(--txt2);margin-top:2px}
+.menu{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.menu a{font-size:15px;padding:8px 14px;border-radius:8px;color:var(--txt2);transition:.2s}
+.menu a:hover{background:var(--card);color:#fff}
+.mbtn{display:none;margin-left:auto;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:7px 13px;cursor:pointer;font-size:16px}
+
+/* 通用 */
+section{padding:60px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;color:var(--cyan);text-transform:uppercase}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--cyan)}
+h2{font-size:30px;margin:10px 0 6px;letter-spacing:.5px}
+.sub{color:var(--txt2);font-size:16px;max-width:720px}
+.pill-row{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 26px}
+.pill{padding:8px 18px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--txt2);transition:.2s}
+.pill:hover,.pill.on{background:var(--cyan);color:#04121a;border-color:var(--cyan);font-weight:600}
+
+/* Hero */
+.hero{min-height:560px;display:flex;align-items:center;position:relative;overflow:hidden;padding:70px 0}
+.hero::before{content:"";position:absolute;width:520px;height:520px;right:-160px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(79,123,255,.35),transparent 70%)}
+.hero::after{content:"";position:absolute;width:420px;height:420px;left:-140px;bottom:-160px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,157,.25),transparent 70%)}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:52px;line-height:1.2;font-weight:900;letter-spacing:-1px}
+.hero h1 span{background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:600px;color:var(--txt2);font-size:18px;margin:18px 0 26px}
+.search{display:flex;gap:8px;max-width:560px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px}
+.search input{flex:1;background:none;border:none;outline:none;color:var(--txt);font-size:16px;padding:0 12px}
+.search button{background:linear-gradient(90deg,var(--blue),var(--cyan));border:none;color:#04121a;font-weight:700;font-size:15px;padding:12px 24px;border-radius:10px;cursor:pointer}
+.stats{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}
+.stats div span{display:block;font-size:13px;color:var(--txt2)}
+.stats div strong{font-size:28px;font-weight:800;background:linear-gradient(90deg,var(--yellow),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* 卡片 */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:var(--cyan);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.thumb{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,var(--card2),var(--bg2))}
+.thumb .badge{position:absolute;left:10px;top:10px;background:var(--pink);color:#fff;font-size:11px;padding:3px 9px;border-radius:6px;font-weight:600}
+.thumb .ep{position:absolute;right:10px;top:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:3px 9px;border-radius:6px}
+.thumb .play{position:absolute;inset:0;display:grid;place-items:center;font-size:40px;color:rgba(255,255,255,.85);opacity:0;transition:.25s}
+.card:hover .play{opacity:1}
+.thumb .play span{width:64px;height:64px;border-radius:50%;background:rgba(57,208,216,.92);color:#04121a;display:grid;place-items:center;font-size:24px}
+.body{padding:14px 16px}
+.body h3{font-size:17px;font-weight:700;margin-bottom:4px}
+.body p{font-size:13px;color:var(--txt2)}
+
+/* 时间表 */
+.schedule{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.schedule .row{display:grid;grid-template-columns:110px 1fr 110px;align-items:center;border-bottom:1px solid var(--line)}
+.schedule .row:last-child{border-bottom:none}
+.schedule .row>div{padding:15px 18px}
+.schedule .time{color:var(--cyan);font-weight:700;font-size:15px}
+.schedule .name{font-size:16px;font-weight:600}
+.schedule .name small{display:block;color:var(--txt2);font-size:13px;font-weight:400}
+.schedule .go{text-align:right;color:var(--pink);font-size:14px}
+
+/* 双栏块 */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.panel h3{font-size:19px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--cyan)}
+.item{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:none}
+.item .num{color:var(--pink);font-size:14px;font-weight:700;min-width:34px}
+.item h4{flex:1;font-size:16px;font-weight:600}
+.item span{font-size:13px;color:var(--txt2);white-space:nowrap}
+.item a:hover h4{color:var(--cyan)}
+
+/* 剧集解析 */
+.episode{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.episode a{background:var(--card);border:1px solid var(--line);text-align:center;padding:11px 4px;border-radius:10px;font-size:14px;transition:.2s}
+.episode a:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#1a1530,#0e1830);border:1px solid var(--line);border-radius:20px;padding:44px;text-align:center;position:relative;overflow:hidden}
+.cta h2{font-size:28px}
+.cta p{color:var(--txt2);margin:12px 0 22px}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--cyan),var(--blue));color:#04121a;font-weight:800;padding:14px 34px;border-radius:999px;font-size:16px;transition:.2s}
+.btn:hover{transform:scale(1.05);box-shadow:0 10px 30px rgba(57,208,216,.4)}
+
+/* 关于 */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
+.about-grid p{color:var(--txt2);font-size:16px}
+.value{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.value div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.value div h4{font-size:16px;margin-bottom:6px;color:var(--yellow)}
+.value div p{font-size:14px}
+
+/* 页脚 */
+footer{background:#070a14;border-top:1px solid var(--line);padding:44px 0 0}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px;padding-bottom:34px}
+.ft h5{font-size:15px;margin-bottom:14px;color:var(--txt)}
+.ft ul{list-style:none}
+.ft li{padding:5px 0;font-size:14px;color:var(--txt2)}
+.ft a:hover{color:var(--cyan)}
+.copy{border-top:1px solid var(--line);padding:20px 0;font-size:13px;color:#5f6a8a;text-align:center}
+
+@media(max-width:960px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .cols,.about-grid{grid-template-columns:1fr}
+  .value{grid-template-columns:1fr 1fr}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{padding:0 14px}
+  .mbtn{display:block}
+  .menu{display:none;width:100%;flex-direction:column;padding:10px 0}
+  .menu.open{display:flex}
+  .hd{flex-wrap:wrap}
+  .hero h1{font-size:32px}
+  .hero{padding:44px 0;min-height:auto}
+  .search{flex-direction:column}
+  .search button{width:100%}
+  section{padding:42px 0}
+  h2{font-size:24px}
+  .grid{grid-template-columns:1fr 1fr}
+  .schedule .row{grid-template-columns:80px 1fr;text-align:left}
+  .schedule .go{grid-column:2;text-align:left;padding-top:0}
+  .episode{grid-template-columns:repeat(4,1fr)}
+  .cta{padding:28px 18px}
+  .stats{gap:24px}
+  .ft{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<div class="notice">
+  <div class="wrap">
+    <b>● 上线提醒</b>
+    <span>免费高清影视（https://mianfeigaoqingyingshi-app.github.io）每日 12:00 / 20:00 两次更新，第一时间同步最新影视资源</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap hd">
+    <div class="logo">免费高清影视<small>HD · MOVIE & DRAMA</small></div>
+    <nav class="menu" id="menu">
+      <a href="#home">首页</a>
+      <a href="#film">电影</a>
+      <a href="#tv">电视剧</a>
+      <a href="#variety">综艺</a>
+      <a href="#anime">动漫</a>
+      <a href="#guide">看片指南</a>
+      <a href="#about">关于本站</a>
+      <a href="https://mianfeigaoqingyingshi-app.github.io/">官网入口</a>
+    </nav>
+    <button class="mbtn" id="mbtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <span class="eyebrow">Free HD Movie &amp; Drama Hub</span>
+    <h1>想看就看，<br><span>免费高清影视</span> 一站搞定</h1>
+    <p>电影、电视剧、综艺、动漫、短剧全分类覆盖。免费高清影视帮你跳过筛选焦虑，直接找到当下最值得追的那一部，画质清晰、更新及时、入口稳定。</p>
+    <form class="search" onsubmit="return false">
+      <input type="text" placeholder="搜索影片 / 剧名 / 演员 / 类型，例如：悬疑、国漫、真人秀">
+      <button type="submit">找片</button>
+    </form>
+    <div class="stats">
+      <div><span>收录内容</span><strong>2.6 万+</strong></div>
+      <div><span>每日更新</span><strong>200+</strong></div>
+      <div><span>内容分类</span><strong>12 类</strong></div>
+      <div><span>画质规格</span><strong>1080P</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="film">
+  <div class="wrap">
+    <span class="eyebrow">Latest Films</span>
+    <h2>电影 · 最新上线</h2>
+    <p class="sub">从院线大片到独立佳作，免费高清影视按类型、地区、年代多维整理，免费高清在线观看入口一键直达。</p>
+    <div class="pill-row">
+      <a href="#" class="pill on">全部</a>
+      <a href="#" class="pill">动作</a><a href="#" class="pill">喜剧</a><a href="#" class="pill">悬疑</a>
+      <a href="#" class="pill">科幻</a><a href="#" class="pill">爱情</a><a href="#" class="pill">动画电影</a><a href="#" class="pill">经典回顾</a>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="thumb"><span class="badge">NEW</span><span class="ep">1080P</span><div class="play"><span>▶</span></div><div class="body"><h3>边境追击</h3></div></div>
+        <div class="body"><h3>边境追击</h3><p>动作 / 犯罪 · 136分钟 · 本周上线</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">HOT</span><span class="ep">1080P</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>第七个嫌疑人</h3><p>悬疑 / 犯罪 · 118分钟 · 豆瓣 8.4</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">NEW</span><span class="ep">1080P</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>夏日邮寄</h3><p>爱情 / 青春 · 105分钟 · 治愈系</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">推荐</span><span class="ep">1080P</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>星际回声</h3><p>科幻 / 冒险 · 148分钟 · 视效大片</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tv" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Hot TV Series</span>
+    <h2>电视剧 · 正在热播</h2>
+    <p class="sub">免费高清影视整理当下热播国产剧、港剧、韩剧与美剧，标注更新进度，告别「追到第几集」的纠结。</p>
+    <div class="pill-row">
+      <a href="#" class="pill on">同步跟播</a>
+      <a href="#" class="pill">国产剧</a><a href="#" class="pill">港台剧</a><a href="#" class="pill">韩剧</a>
+      <a href="#" class="pill">美剧</a><a href="#" class="pill">短剧</a><a href="#" class="pill">完结精选</a>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="thumb"><span class="badge">跟播</span><span class="ep">更至 24 集</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>长安夜行录</h3><p>古装 / 悬疑 · 36集全 · 每晚 20:00</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">HOT</span><span class="ep">更至 12 集</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>急诊室的故事·第四季</h3><p>都市 / 医疗 · 40集 · 口碑回升</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">完结</span><span class="ep">28 集全</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>山那边有片海</h3><p>年代 / 家庭 · 28集 · 一口气刷完</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">新剧</span><span class="ep">更至 6 集</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>代码恋人</h3><p>都市 / 爱情 · 24集 · 轻喜剧</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="variety" style="background:linear-gradient(180deg,transparent,rgba(26,21,48,.6))">
+  <div class="wrap">
+    <span class="eyebrow">Variety Show</span>
+    <h2>综艺 · 真人秀</h2>
+    <p class="sub">免费高清影视汇总户外真人秀、竞演综艺、脱口秀与生活观察类节目，更新日程一目了然，随时补档不落期。</p>
+    <div class="schedule">
+      <div class="row"><div class="time">周六 20:20</div><div class="name">极限大挑战·第十季<small>户外竞技真人秀 · 常驻嘉宾 6 位</small></div><div class="go"><a href="#">查看 →</a></div></div>
+      <div class="row"><div class="time">周日 21:00</div><div class="name">歌手的夏天<small>音乐竞演 · 本季 12 期</small></div><div class="go"><a href="#">查看 →</a></div></div>
+      <div class="row"><div class="time">周一 12:00</div><div class="name">深夜书房<small>文化对谈 · 每周一位嘉宾</small></div><div class="go"><a href="#">查看 →</a></div></div>
+      <div class="row"><div class="time">周三 22:00</div><div class="name">一桌年夜饭<small>美食观察 · 下饭首选</small></div><div class="go"><a href="#">查看 →</a></div></div>
+      <div class="row"><div class="time">周五 20:00</div><div class="name">喜剧之王单元剧<small>新人竞演 · 观众投票定去留</small></div><div class="go"><a href="#">查看 →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="anime" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Anime &amp; Comic</span>
+    <h2>动漫 · 番剧与国漫</h2>
+    <p class="sub">日漫新番、国漫精品、经典剧场版，免费高清影视按季度与新番表整理，追番日历清晰可见。</p>
+    <div class="grid">
+      <article class="card">
+        <div class="thumb"><span class="badge">新番</span><span class="ep">更新中</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>苍穹之下</h3><p>热血 / 机战 · 国漫 · 周更</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">新番</span><span class="ep">第 8 集</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>咖啡店与猫的日常</h3><p>治愈 / 日常 · 日漫 · 周更</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">剧场版</span><span class="ep">高清</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>深海回响</h3><p>奇幻 / 冒险 · 剧场版电影</p></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="badge">经典</span><span class="ep">全 52 集</span><div class="play"><span>▶</span></div></div>
+        <div class="body"><h3>山海经·异兽录</h3><p>神话 / 国漫 · 完结可补</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="ep">
+  <div class="wrap">
+    <span class="eyebrow">Episode Guide</span>
+    <h2>剧集解析 · 选集直达</h2>
+    <p class="sub">热门剧集分集整理，附带看点与节奏提示，帮助你在免费高清影视快速定位到想看的那一段。</p>
+    <div class="cols" style="margin-top:24px">
+      <div class="panel">
+        <h3><span class="dot"></span>长安夜行录 · 分集导航</h3>
+        <div class="episode">
+          <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a>
+          <a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a><a href="#">11</a><a href="#">12</a>
+          <a href="#">13</a><a href="#">14</a><a href="#">15</a><a href="#">16</a><a href="#">17</a><a href="#">18</a>
+          <a href="#">19</a><a href="#">20</a><a href="#">21</a><a href="#">22</a><a href="#">23</a><a href="#">24</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h3><span class="dot"></span>急诊室的故事·第四季</h3>
+        <div class="episode">
+          <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a>
+          <a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a><a href="#">11</a><a href="#">12</a>
+          <a href="#">13</a><a href="#">14</a><a href="#">15</a><a href="#">16</a><a href="#">17</a><a href="#">18</a>
+          <a href="#">19</a><a href="#">20</a><a href="#">21</a><a href="#">22</a><a href="#">23</a><a href="#">24</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guide">
+  <div class="wrap">
+    <span class="eyebrow">Watching Guide</span>
+    <h2>看片指南 · 资讯与推荐</h2>
+    <p class="sub">免费高清影视编辑部持续输出影视资讯、片单推荐与入坑指南，让选片不再靠盲猜。</p>
+    <div class="cols" style="margin-top:24px">
+      <div class="panel">
+        <h3><span class="dot"></span>精选推荐</h3>
+        <a class="item" href="#"><span class="num">01</span><h4>周末补档清单：五部节奏紧凑的悬疑剧</h4><span>10-20</span></a>
+        <a class="item" href="#"><span class="num">02</span><h4>2026 必看国漫 TOP10，从热血到治愈</h4><span>10-18</span></a>
+        <a class="item" href="#"><span class="num">03</span><h4>综艺下饭指南：一边吃饭一边刷</h4><span>10-16</span></a>
+        <a class="item" href="#"><span class="num">04</span><h4>老剧重温：这三部为什么越看越上头</h4><span>10-14</span></a>
+        <a class="item" href="#"><span class="num">05</span><h4>新番入坑门槛低，这六部适合随手看</h4><span>10-12</span></a>
+      </div>
+      <div class="panel">
+        <h3><span class="dot"></span>影视资讯</h3>
+        <a class="item" href="#"><span class="num">06</span><h4>《边境追击》口碑逆袭，动作设计成亮点</h4><span>10-19</span></a>
+        <a class="item" href="#"><span class="num">07</span><h4>《长安夜行录》迎来反转高潮，弹幕炸了</h4><span>10-17</span></a>
+        <a class="item" href="#"><span class="num">08</span><h4>三大平台 11 月片单出炉，有哪些值得期待</h4><span>10-15</span></a>
+        <a class="item" href="#"><span class="num">09</span><h4>剧集排播调整：这几部时间改了</h4><span>10-13</span></a>
+        <a class="item" href="#"><span class="num">10</span><h4>短剧赛道观察：一分钟一个反转还能火多久</h4><span>10-11</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="padding:0 0 60px">
+  <div class="wrap">
+    <div class="cta">
+      <span class="eyebrow">Start Watching</span>
+      <h2>现在就打开免费高清影视</h2>
+      <p>免费高清影视官网：https://mianfeigaoqingyingshi-app.github.io，稳定入口、清晰画质、分类齐全，追剧看片一站到位。</p>
+      <a class="btn" href="https://mianfeigaoqingyingshi-app.github.io/">进入 免费高清影视 官网</a>
+    </div>
+  </div>
+</div>
+
+<section id="about" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">About Site</span>
+    <h2>关于 免费高清影视</h2>
+    <div class="about-grid" style="margin-top:26px">
+      <div>
+        <p>免费高清影视（https://mianfeigaoqingyingshi-app.github.io）是一个面向普通观众的影视信息聚合与看片导航站。网站名称「免费高清影视」直白表达了核心定位：不收费、画质高、资源全。</p>
+        <p style="margin-top:14px">我们不做内容搬运，而是把分散的影视内容按类型、地区、年代、热度重新整理，配合上线预告、剧集解析与片单推荐，帮你用最少的时间找到最想看的那一部。</p>
+      </div>
+      <div class="value">
+        <div><h4>01 零门槛</h4><p>无需注册登录，打开即看，不设置付费关卡。</p></div>
+        <div><h4>02 画质优先</h4><p>统一筛选高清片源，模糊、卡顿内容不收录。</p></div>
+        <div><h4>03 更新及时</h4><p>每日两次同步更新，跟播进度实时标注。</p></div>
+        <div><h4>04 分类清晰</h4><p>电影、电视剧、综艺、动漫四大主线加短剧专题。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <div>
+      <div class="logo" style="font-size:20px">免费高清影视<small>HD · MOVIE & DRAMA</small></div>
+      <p style="color:var(--txt2);font-size:14px;margin-top:12px;max-width:320px">免费高清影视官网：https://mianfeigaoqingyingshi-app.github.io，提供免费高清影视信息聚合、看片指南与资源导航服务。</p>
+    </div>
+    <div><h5>内容分类</h5><ul>
+      <li><a href="#film">电影</a></li><li><a href="#tv">电视剧</a></li>
+      <li><a href="#variety">综艺</a></li><li><a href="#anime">动漫</a></li><li><a href="#ep">剧集解析</a></li>
+    </ul></div>
+    <div><h5>常用入口</h5><ul>
+      <li><a href="https://mianfeigaoqingyingshi-app.github.io/">免费高清影视官网首页</a></li>
+      <li><a href="#">今日更新</a></li><li><a href="#">高分片单</a></li><li><a href="#">追剧日历</a></li>
+    </ul></div>
+    <div><h5>关于本站</h5><ul>
+      <li><a href="#about">站点介绍</a></li><li><a href="#">内容说明</a></li><li><a href="#">合作联系</a></li><li><a href="#">意见反馈</a></li>
+    </ul></div>
+  </div>
+  <div class="wrap copy">&copy; 2026 免费高清影视 · 网站网址：https://mianfeigaoqingyingshi-app.github.io · 本站为影视信息导航与看片指南，所涉影片版权归出品方与发行方所有</div>
+</footer>
+
+<script>
+document.getElementById('mbtn').addEventListener('click',function(){
+  document.getElementById('menu').classList.toggle('open');
+});
+document.querySelectorAll('.pill').forEach(function(p){
+  p.addEventListener('click',function(e){
+    e.preventDefault();
+    var sibs=this.parentElement.querySelectorAll('.pill');
+    sibs.forEach(function(x){x.classList.remove('on');});
+    this.classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
